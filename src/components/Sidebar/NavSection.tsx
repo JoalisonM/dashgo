@@ -1,0 +1,19 @@
+import { ReactNode } from "react";
+import { Box, Stack, Text, Link, Icon } from "@chakra-ui/react";
+import { RiContactsLine, RiDatabaseLine } from "react-icons/ri";
+
+interface NavSectionProps {
+  title: string;
+  children: ReactNode;
+}
+
+export function NavSection({ title, children }: NavSectionProps) {
+  return (
+    <Box>
+      <Text fontWeight="bold" color="gray.400" fontSize="small">{title}</Text>
+      <Stack spacing="4" marginTop="8" align="stretch">
+        {children}
+      </Stack>
+    </Box>
+  );
+}
